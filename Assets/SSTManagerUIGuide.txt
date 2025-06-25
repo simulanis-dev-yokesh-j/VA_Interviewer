@@ -1,0 +1,65 @@
+SSTManager Enhanced UI Setup Guide
+=====================================
+
+Required UI Components for SSTManager.cs:
+
+1. **Text Components (TextMeshPro):**
+   - outputText: Shows speech recognition results and status messages
+   - microphoneStatusText: Shows selected microphone and available devices info
+
+2. **Buttons:**
+   - startRecordButton: Toggle recording on/off
+   - playbackButton: Play recorded audio for confirmation
+   - confirmAndSendButton: Send recorded audio to Azure Speech Service
+
+3. **Dropdown:**
+   - microphoneDropdown (TMP_Dropdown): Select from available microphones
+
+4. **Slider:**
+   - volumeIndicator: Shows real-time recording volume levels
+
+5. **AudioSource:**
+   - audioSource: For playing back recorded audio (auto-created if not assigned)
+
+Scene Setup Instructions:
+========================
+
+1. Create a Canvas in your scene if you don't have one
+2. Add these UI elements as children of the Canvas:
+   
+   Canvas
+   ├── OutputText (TextMeshPro - UGUI)
+   ├── MicrophoneStatusText (TextMeshPro - UGUI)
+   ├── StartRecordButton (Button)
+   ├── PlaybackButton (Button)
+   ├── ConfirmSendButton (Button)
+   ├── MicrophoneDropdown (TMP_Dropdown)
+   └── VolumeSlider (Slider)
+
+3. Drag the SSTManager script onto a GameObject (e.g., create an empty GameObject called "SSTManager")
+4. Assign all the UI components to their respective fields in the SSTManager script inspector
+
+Features:
+=========
+✅ Shows which microphone is currently selected
+✅ Lists all available microphones with frequency ranges
+✅ Records audio with real-time volume feedback
+✅ Allows playback confirmation before sending to Azure
+✅ Proper 16kHz sample rate for optimal Azure recognition
+✅ Converts audio to WAV format for Azure compatibility
+✅ Enhanced error handling and user feedback
+
+Debug Information:
+==================
+The script logs detailed information to the Console:
+- Microphone selection changes
+- Recording start/stop with technical details
+- Azure Speech Service responses
+- Error messages for troubleshooting
+
+Tips:
+=====
+- Test microphone selection with different devices
+- Use the volume indicator to ensure proper recording levels
+- Always listen to playback before sending to Azure
+- Check the Console for detailed technical information 
