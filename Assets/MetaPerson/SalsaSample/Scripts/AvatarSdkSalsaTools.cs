@@ -10,9 +10,9 @@ public static class AvatarSdkSalsaTools
 {
     public static void Configure(GameObject avatarObj, GameObject parentObj, AudioClip audioClip = null)
     {
-        OneClickAvatarSdkEyes.BlendshapeScale = OneClickAvatarSdk.BlendshapeScale = AvatarSdkSalsaTools.GetMaxBlendshapesValue(avatarObj);
-        OneClickAvatarSdk.Setup(parentObj);
-        OneClickAvatarSdkEyes.Setup(parentObj);
+        // OneClickAvatarSdkEyes.BlendshapeScale = OneClickAvatarSdk.BlendshapeScale = AvatarSdkSalsaTools.GetMaxBlendshapesValue(avatarObj);
+        // OneClickAvatarSdk.Setup(parentObj);
+        // OneClickAvatarSdkEyes.Setup(parentObj);
 
         if (parentObj.GetComponent<QueueProcessor>() == null)
         {
