@@ -39,37 +39,6 @@ public class SSTManager : SerializedMonoBehaviour
     public string selectedMicrophone;
     
     [TitleGroup("Microphone Settings")]
-    [LabelText("Preferred Default Microphone")]
-    [InfoBox("Set your preferred microphone here. It will be automatically selected when available.")]
-    [ValueDropdown("availableMicrophones")]
-    [OnValueChanged("OnPreferredMicrophoneChanged")]
-    public string preferredDefaultMicrophone;
-    
-    [TitleGroup("Microphone Settings")]
-    [Button("Save as Default")]
-    [GUIColor(0.4f, 0.8f, 0.4f)]
-    [EnableIf("@!string.IsNullOrEmpty(selectedMicrophone)")]
-    public void SaveCurrentMicrophoneAsDefault()
-    {
-        preferredDefaultMicrophone = selectedMicrophone;
-        PlayerPrefs.SetString("PreferredMicrophone", preferredDefaultMicrophone);
-        PlayerPrefs.Save();
-        Debug.Log($"Saved '{preferredDefaultMicrophone}' as default microphone");
-    }
-    
-    [TitleGroup("Microphone Settings")]
-    [Button("Clear Default")]
-    [GUIColor(0.8f, 0.6f, 0.4f)]
-    [EnableIf("@!string.IsNullOrEmpty(preferredDefaultMicrophone)")]
-    public void ClearDefaultMicrophone()
-    {
-        preferredDefaultMicrophone = "";
-        PlayerPrefs.DeleteKey("PreferredMicrophone");
-        PlayerPrefs.Save();
-        Debug.Log("Cleared default microphone preference");
-    }
-    
-    [TitleGroup("Microphone Settings")]
     [ShowInInspector, ReadOnly]
     [LabelText("Microphone Status")]
     public string microphoneStatus = "Initializing...";
@@ -222,7 +191,7 @@ public class SSTManager : SerializedMonoBehaviour
     // ========================================
     
     private object threadLocker = new object();
-    private bool waitingForReco;
+    public bool waitingForReco;
     private bool isRecording;
     private bool micPermissionGranted = false;
     
@@ -320,16 +289,6 @@ public class SSTManager : SerializedMonoBehaviour
         UpdateOdinInspectorValues();
     }
     
-    private void OnPreferredMicrophoneChanged()
-    {
-        if (!string.IsNullOrEmpty(preferredDefaultMicrophone))
-        {
-            PlayerPrefs.SetString("PreferredMicrophone", preferredDefaultMicrophone);
-            PlayerPrefs.Save();
-            Debug.Log($"Preferred microphone set to: {preferredDefaultMicrophone}");
-        }
-    }
-    
     // ========================================
     // CORE FUNCTIONALITY (renamed internal methods)
     // ========================================
@@ -398,36 +357,13 @@ public class SSTManager : SerializedMonoBehaviour
             availableMicrophones.Add("Default Microphone");
         }
 
-        // Load preferred microphone from PlayerPrefs
-        string savedPreferredMic = PlayerPrefs.GetString("PreferredMicrophone", "");
-        if (!string.IsNullOrEmpty(savedPreferredMic))
-        {
-            preferredDefaultMicrophone = savedPreferredMic;
-        }
-
-        // Auto-select microphone based on preference
+        // Set the first microphone as selected if none selected
         if (string.IsNullOrEmpty(selectedMicrophone) && availableMicrophones.Count > 0)
         {
-            // First, try to select the preferred microphone if it's available
-            if (!string.IsNullOrEmpty(preferredDefaultMicrophone) && availableMicrophones.Contains(preferredDefaultMicrophone))
-            {
-                selectedMicrophone = preferredDefaultMicrophone;
-                Debug.Log($"Auto-selected preferred microphone: {selectedMicrophone}");
-            }
-            else
-            {
-                // If preferred microphone is not available, select the first one
-                selectedMicrophone = availableMicrophones[0];
-                Debug.Log($"Preferred microphone not available, selected: {selectedMicrophone}");
-            }
+            selectedMicrophone = availableMicrophones[0];
         }
         
         Debug.Log($"Found {availableMicrophones.Count} microphones: {string.Join(", ", availableMicrophones)}");
-        
-        if (!string.IsNullOrEmpty(preferredDefaultMicrophone))
-        {
-            Debug.Log($"Preferred microphone setting: {preferredDefaultMicrophone}");
-        }
     }
 
     private void SetupUI()
@@ -753,6 +689,34 @@ public class SSTManager : SerializedMonoBehaviour
 
             return stream.ToArray();
         }
+    }
+
+    // ========================================
+    // PUBLIC METHODS FOR UI DEBUGGING
+    // ========================================
+    
+    [TitleGroup("Manual UI Connection")]
+    [Button("Force UI Setup")]
+    [InfoBox("Click this if UI buttons are not working. This will re-setup the UI connections.")]
+    public void ForceUISetup()
+    {
+        SetupUI();
+        Debug.Log("🔄 UI setup forced. Check if UI components are assigned in the 'UI Components (Optional)' section.");
+    }
+    
+    [TitleGroup("Manual UI Connection")]
+    [Button("Test UI Connections")]
+    public void TestUIConnections()
+    {
+        Debug.Log("=== UI Connection Status ===");
+        Debug.Log($"outputText: {(outputText != null ? "✅ Connected" : "❌ Missing")}");
+        Debug.Log($"microphoneStatusText: {(microphoneStatusText != null ? "✅ Connected" : "❌ Missing")}");
+        Debug.Log($"startRecordButton: {(startRecordButton != null ? "✅ Connected" : "❌ Missing")}");
+        Debug.Log($"playbackButton: {(playbackButton != null ? "✅ Connected" : "❌ Missing")}");
+        Debug.Log($"confirmAndSendButton: {(confirmAndSendButton != null ? "✅ Connected" : "❌ Missing")}");
+        Debug.Log($"microphoneDropdown: {(microphoneDropdown != null ? "✅ Connected" : "❌ Missing")}");
+        Debug.Log($"volumeIndicator: {(volumeIndicator != null ? "✅ Connected" : "❌ Missing")}");
+        Debug.Log($"audioSource: {(audioSource != null ? "✅ Connected" : "❌ Missing")}");
     }
 
     private void OnDestroy()

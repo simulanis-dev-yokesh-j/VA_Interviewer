@@ -76,18 +76,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_VA\Scripts\DialogServiceConnectorSample.cs" />
+    <Compile Include="Assets\InterviewAPIManager.cs" />
     <Compile Include="Assets\Crazy Minnow Studio\Examples\Scripts\SALSA_Template_CustomAudioAnalysisPlugin.cs" />
     <Compile Include="Assets\Samples\MetaPerson Loader\1.1.0\Eyes Animation Sample\Scripts\EyesAnimationSampleHandler.cs" />
-    <Compile Include="Assets\SimpleUIBuilder.cs" />
+    <Compile Include="Assets\UnifiedSpeechUI.cs" />
     <Compile Include="Assets\_VA_STT\speechrecognizer\Assets\SpeechSDKSample\Scripts\UIManager.cs" />
     <Compile Include="Assets\MetaPerson\SalsaSample\Scripts\SalsaSampleSceneHandler.cs" />
     <Compile Include="Assets\MetaPerson\SalsaSample\Scripts\AvatarSdkSalsaTools.cs" />
     <Compile Include="Assets\_VA_STT\speechrecognizer\Assets\SpeechSDKSample\Scripts\IntentRecognition.cs" />
     <Compile Include="Assets\_VA_TTS\Scripts\HelloWorld.cs" />
     <Compile Include="Assets\_VA_STT\speechrecognizer\Assets\SpeechSDKSample\Scripts\IntentResult.cs" />
+    <Compile Include="Assets\InterviewIntegrationManager.cs" />
     <Compile Include="Assets\Crazy Minnow Studio\Examples\Scripts\SALSA_Template_SalsaVisemeTriggerEventSubscriber.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\_VA_STT\speechrecognizer\Assets\SpeechSDKSample\Scripts\JSONParser.cs" />
+    <Compile Include="Assets\UnifiedSpeechManager.cs" />
     <Compile Include="Assets\_VA\Scripts\InterviewBotLogic.cs" />
     <Compile Include="Assets\Crazy Minnow Studio\Examples\Scripts\SALSA_Template_AudioFilterProcessor.cs" />
     <Compile Include="Assets\SSTManager.cs" />
@@ -140,7 +143,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\SSTManagerUIGuide.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
