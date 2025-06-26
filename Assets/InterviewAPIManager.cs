@@ -147,7 +147,7 @@ public class InterviewAPIManager : SerializedMonoBehaviour
     {
         if (!string.IsNullOrEmpty(currentSessionId))
         {
-            await SendChatMessage(testMessage, currentSessionId);
+             _ = SendChatMessage(testMessage, currentSessionId);
         }
     }
     
@@ -228,13 +228,16 @@ public class InterviewAPIManager : SerializedMonoBehaviour
             throw;
         }
     }
-    
+
+    public int t;
     /// <summary>
     /// Send a chat message to the AI
     /// </summary>
+    /// 
     public async Task<ChatMessageResponse> SendChatMessage(string message, string sessionId)
     {
-        sessionStatus = "Sending message...";
+        t++;
+        sessionStatus = "Sending message..."+t;
         
         var request = new ChatMessageRequest
         {
@@ -248,7 +251,7 @@ public class InterviewAPIManager : SerializedMonoBehaviour
             string response = await PostRequest(endpoint, request);
             
             var chatResponse = JsonConvert.DeserializeObject<ChatMessageResponse>(response);
-            
+            chatMessages.Add(chatResponse);
             // Update session status
             lastResponse = chatResponse.response;
             sessionStatus = chatResponse.session_ended ? "Session ended" : "Active";
@@ -266,7 +269,7 @@ public class InterviewAPIManager : SerializedMonoBehaviour
             throw;
         }
     }
-    
+    public List<ChatMessageResponse> chatMessages = new List<ChatMessageResponse>();
     /// <summary>
     /// Get session information
     /// </summary>

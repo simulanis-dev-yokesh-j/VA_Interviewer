@@ -72,7 +72,7 @@ public class SalsaSampleSceneHandler : MonoBehaviour
         button.gameObject.SetActive(false);
         progressText.gameObject.SetActive(true);
 
-        await loader.LoadModelAsync(avatarUri, ProgressReport);        
+       // await loader.LoadModelAsync(avatarUri, ProgressReport);        
         progressText.gameObject.SetActive(false);        
         
         ReleaseSalsa();
