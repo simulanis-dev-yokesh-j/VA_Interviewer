@@ -1240,9 +1240,17 @@
       <Project>{b2474ebd-4321-0be8-f0f5-5adc3c4770e5}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.SpatialKeyboard</Name>
     </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
+      <Project>{f2a7086c-330a-e9e0-d878-4617b6b7c1c7}</Project>
+      <Name>IngameDebugConsole.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Vuplex.WebView.csproj">
       <Project>{701c10f6-6fb8-b104-f4f6-ea702e9bf224}</Project>
       <Name>Vuplex.WebView</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Editor.csproj">
+      <Project>{ff2fe7a7-87e5-49dc-a2ff-fb01b16cd0c8}</Project>
+      <Name>IngameDebugConsole.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

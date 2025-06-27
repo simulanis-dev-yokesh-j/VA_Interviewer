@@ -7,13 +7,14 @@ using UnityEditor;
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
 #if UNITY_EDITOR
-    [InitializeOnLoad]
+    //[InitializeOnLoad]
     static class RenderPipelineValidation
     {
         static RenderPipelineValidation()
         {
-            foreach (var pipelineHandler in GetAllInstances())
-                pipelineHandler.AutoRefreshPipelineShaders();
+            // Temporarily disabled to prevent crashes
+            //foreach (var pipelineHandler in GetAllInstances())
+            //    pipelineHandler.AutoRefreshPipelineShaders();
         }
 
         static List<MaterialPipelineHandler> GetAllInstances()

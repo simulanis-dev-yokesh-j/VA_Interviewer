@@ -80,7 +80,6 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Notification\NotificationManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerSwitch.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Context Menu\ContextMenuSubMenu.cs" />
-    <Compile Include="Assets\InterviewAPIManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Toggle\CustomToggle.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Dropdown\DropdownMultiSelect.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerButtonEditor.cs" />
@@ -103,13 +102,8 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Switch\SwitchManager.cs" />
     <Compile Include="Assets\Scripts\OnboardingUIGenerator.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Modal Window\ModalWindowManagerEditor.cs" />
-    <Compile Include="Assets\SineVFX\GalaxyMaterials\Resources\Scripts\SineCameraControllerGalaxyMaterials.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerSlider.cs" />
-    <Compile Include="Assets\INab Studio\Dissolve-FX\Helpers\ShowcaseList.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Charts\PieChartEditor.cs" />
-    <Compile Include="Assets\UnifiedSpeechUI.cs" />
-    <Compile Include="Assets\TTSManager.cs" />
-    <Compile Include="Assets\INab Studio\Dissolve-FX\Helpers\FloatingCoin.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Icon\IconLibraryEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Switch\SwitchManagerEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Core\MUIPInternalTools.cs" />
@@ -143,13 +137,12 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Icon\IconLibrary.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerTooltip.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Tooltip\TooltipManager.cs" />
+    <Compile Include="Assets\Scripts\InterviewAPIManager.cs" />
     <Compile Include="Assets\_VA_STT\speechrecognizer\Assets\SpeechSDKSample\Scripts\IntentResult.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Context Menu\ContextMenuContentMobile.cs" />
-    <Compile Include="Assets\InterviewIntegrationManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Demo\LaunchURL.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Charts\PieChart.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Demo\DemoListShadow.cs" />
-    <Compile Include="Assets\INab Studio\Demo Assets\Unity Companion License\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Crazy Minnow Studio\Examples\Scripts\SALSA_Template_SalsaVisemeTriggerEventSubscriber.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Notification\NotificationManagerEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Demo\DemoElementSwayParent.cs" />
@@ -159,23 +152,17 @@
     <Compile Include="Assets\_VA_STT\speechrecognizer\Assets\SpeechSDKSample\Scripts\JSONParser.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Button\ButtonManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerDropdownItem.cs" />
-    <Compile Include="Assets\AudioTester.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Icon\IconManagerEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerScrollbar.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerWindowManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Notification\NotificationStacking.cs" />
-    <Compile Include="Assets\InterviewConversationManager.cs" />
-    <Compile Include="Assets\SineVFX\GalaxyMaterials\Resources\Scripts\SineUIControllerGalaxyMaterials.cs" />
-    <Compile Include="Assets\INab Studio\Dissolve-FX\Helpers\DissolverAutomaticTest.cs" />
-    <Compile Include="Assets\UnifiedSpeechManager.cs" />
+    <Compile Include="Assets\Scripts\InterviewConversationManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Progress Bar\ProgressBarEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Dropdown\CustomDropdownEditor.cs" />
     <Compile Include="Assets\_VA\Scripts\InterviewBotLogic.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Slider\RangeSlider.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerProgressBarLoop.cs" />
     <Compile Include="Assets\Crazy Minnow Studio\Examples\Scripts\SALSA_Template_AudioFilterProcessor.cs" />
-    <Compile Include="Assets\INab Studio\Dissolve-FX\Helpers\PrefabsPlacer.cs" />
-    <Compile Include="Assets\SSTManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Context Menu\ContextMenuContentEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowDragger.cs" />
@@ -188,18 +175,16 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Slider\SliderManagerEditor.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerPieChart.cs" />
     <Compile Include="Assets\_VA_STT\speechrecognizer\Assets\SpeechSDKSample\Scripts\SpeechRecognition.cs" />
-    <Compile Include="Assets\INab Studio\Demo Assets\Unity Companion License\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerContextMenu.cs" />
+    <Compile Include="Assets\Scripts\TTSManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\UI Manager\UIManagerAnimatedIcon.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Icon\IconManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Layout Group\LayoutGroupFix.cs" />
     <Compile Include="Assets\Crazy Minnow Studio\Examples\Scripts\SALSA_Template_EventControllerSubscriber.cs" />
+    <Compile Include="Assets\Scripts\SSTManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Rendering\UIGradient.cs" />
-    <Compile Include="Assets\INab Studio\Dissolve-FX\Core\Scripts\Dissolver.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Horizontal Selector\HorizontalSelectorEditor.cs" />
-    <Compile Include="Assets\INab Studio\Dissolve-FX\Helpers\DecalDissolve.cs" />
     <Compile Include="Assets\_VA\Scripts\AudioData.cs" />
-    <Compile Include="Assets\INab Studio\Demo Assets\Unity Companion License\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManager.cs" />
     <Compile Include="Assets\Crazy Minnow Studio\Examples\Scripts\SALSA_Template_SalsaEventSubscriber.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManagerEditor.cs" />
@@ -211,20 +196,16 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\StreamingAssets\en-US\display formatting\training\data_display format.txt" />
-    <None Include="Assets\INab Studio\Dissolve-FX\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\useSharedDesignerContext.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\SineVFX\GalaxyMaterials\_Documentation\02.MaterialParameters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Resources\PerformanceTestRunInfo.json" />
     <None Include="Assets\Packages\System.ClientModel.1.4.2\lib\netstandard2.0\System.ClientModel.xml" />
     <None Include="Assets\Packages\System.Memory.Data.6.0.1\useSharedDesignerContext.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\MPUIKit\readme.txt" />
     <None Include="Assets\Packages\System.Text.Encodings.Web.8.0.0\useSharedDesignerContext.txt" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.3\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml" />
-    <None Include="Assets\INab Studio\Dissolve-FX\Common\Subgraphs\Utilities\HLSL\TriplanarLOD.hlsl" />
     <None Include="Assets\Modern UI Pack\Read Me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\useSharedDesignerContext.txt" />
@@ -235,7 +216,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\netstandard2.1\Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\Resources\PerformanceTestRunSettings.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\StreamingAssets\en-US\biology\training\pronunciation.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -244,18 +224,13 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\_VA_STT\speechrecognizer\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Packages\System.Text.Json.8.0.5\useSharedDesignerContext.txt" />
-    <None Include="Assets\SineVFX\GalaxyMaterials\_Packages\!!!_ReadBeforeImport_!!!.txt" />
-    <None Include="Assets\SineVFX\GalaxyMaterials\_Documentation\!!!_BetterDocumentationOnline_!!!.txt" />
-    <None Include="Assets\SineVFX\GalaxyMaterials\_Documentation\01.QuickStart.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Packages\System.Text.Encodings.Web.8.0.0\lib\netstandard2.0\System.Text.Encodings.Web.xml" />
-    <None Include="Assets\SineVFX\GalaxyMaterials\_Documentation\03.SkyboxUpdate.txt" />
     <None Include="Assets\Packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\netstandard2.0\System.Diagnostics.DiagnosticSource.xml" />
     <None Include="Assets\Packages\System.Diagnostics.DiagnosticSource.8.0.1\useSharedDesignerContext.txt" />
     <None Include="Assets\Packages\System.Memory.Data.6.0.1\lib\netstandard2.0\System.Memory.Data.xml" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.3\useSharedDesignerContext.txt" />
     <None Include="Assets\Vuplex\WebView\Standalone\LICENSE_Standalone.txt" />
-    <None Include="Assets\SineVFX\GalaxyMaterials\Resources\Environment\EnvShaders\SkyboxProceduralDesaturatedGM.shader" />
     <None Include="Assets\_VA_STT\speechrecognizer\LUIS-App-Export-Unity-FunWithShapes.json" />
     <None Include="Assets\SpeechSDK\REDIST.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
@@ -1425,9 +1400,17 @@
       <Project>{b2474ebd-4321-0be8-f0f5-5adc3c4770e5}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.SpatialKeyboard</Name>
     </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
+      <Project>{f2a7086c-330a-e9e0-d878-4617b6b7c1c7}</Project>
+      <Name>IngameDebugConsole.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Vuplex.WebView.csproj">
       <Project>{701c10f6-6fb8-b104-f4f6-ea702e9bf224}</Project>
       <Name>Vuplex.WebView</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Editor.csproj">
+      <Project>{ff2fe7a7-87e5-49dc-a2ff-fb01b16cd0c8}</Project>
+      <Name>IngameDebugConsole.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
